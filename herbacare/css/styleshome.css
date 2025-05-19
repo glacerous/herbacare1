@@ -1,0 +1,105 @@
+
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 80px;
+  background-color: #f5f5f5;
+  height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.hero-left {
+  flex: 12;
+}
+
+.top-left-note {
+  position: absolute;
+  top: 60px;
+  left: 40px;
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+  max-width: 200px;
+}
+
+
+.bottom-left-note {
+  position: absolute;
+  bottom: 120px;
+  left: 400px;
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+  max-width: 200px;
+}
+.bottom-left-note2 {
+  position: absolute;
+  bottom: 80px;
+  left: 630px;
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+  max-width: 200px;
+}
+
+.hero-center {
+  z-index: 1;
+  position: relative;
+  position: absolute; /* allows X, Y, Z control */
+  top: 9%;     /* adjust Y position */
+  left: 25%; 
+}
+
+.hero-center h1 {
+  font-size: 110px;
+  font-weight: 900;
+  line-height: 1.1;
+  position: relative;
+  z-index: 1;
+}
+
+.herb-image {
+  position: absolute; /* allows X, Y, Z control */
+  top: 6%;     /* adjust Y position */
+  left: 50%;    /* adjust X position */
+  z-index: 3;   /* bring image on top of text */
+}
+
+.herb-image img {
+  width: 800px;
+  height: auto;
+  pointer-events: none; /* optional: makes image non-interactive */
+}
+
+
+/* Optional: Responsive */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero-left, .hero-center, .hero-right {
+    flex: none;
+    max-width: 100%;
+  }
+
+  .hero-center h1 {
+    font-size: 50px;
+  }
+
+  .hero-right img {
+    width: 80%;
+    margin-top: 20px;
+    transform: none;
+  }
+
+  .hero-left .small-title {
+    margin: 0 auto 20px;
+  }
+}
